@@ -5,13 +5,6 @@ import base64
 import time
 import os
 
-def clear_terminal():
-    # Check the operating system
-    if os.name == 'nt':  # Windows
-        os.system('cls')
-    else:  # Unix-like (Linux, macOS)
-        os.system('clear')
-
 def convert_base64_to_format(input_file: str, t):
     uid = str(time.time() * 1000)
 
@@ -45,21 +38,6 @@ def convert_base64_to_format(input_file: str, t):
         fnf.write(binary_data)
 
     print(f"Converted {input_file} to {output_path}")
-
-def read_input(min_val, max_val, msg):
-    try:
-        data = float(input(msg))  # Change to int(input(msg)) if you want integers only
-    except ValueError:
-        clear_terminal()
-        print("Invalid input. Please enter a number.")
-        return read_input(min_val, max_val, msg)
-
-    if data > max_val or data < min_val:
-        clear_terminal()
-        print(f"Input must be between {min_val} and {max_val}. Please try again.")
-        return read_input(min_val, max_val, msg)
-
-    return data
 
 import mimetypes
 

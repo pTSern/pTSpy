@@ -1,6 +1,7 @@
 
-from utils import uid
+from utils import install_pkg, uid
 
+install_pkg('minify_html')
 
 import minify_html
 

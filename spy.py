@@ -1,8 +1,11 @@
+from utils import install_pkg
 
 import subprocess
 import os
 import time
 import re
+
+install_pkg('requests')
 
 import requests
 
