@@ -23,4 +23,4 @@ for %%L in (%LIBS%) do (
 
 echo All libraries are installed.
 
-pyinstaller --onefile --name pTSpy pTSpy.py
+python -m PyInstaller --onefile --name pTSpy pTSpy.py
